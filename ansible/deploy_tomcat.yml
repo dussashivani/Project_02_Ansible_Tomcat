@@ -4,7 +4,7 @@
   become: true
   vars:
     java_pkg: java-1.8.0-openjdk-devel
-    tomcat_version: 9.0.109
+    tomcat_version: 10.1.59
     tomcat_install_dir: /opt/tomcat
     tomcat_service: tomcat
 
@@ -27,7 +27,7 @@
 
     - name: Download Tomcat
       get_url:
-        url: "https://downloads.apache.org/tomcat/tomcat-9/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
+        url: "https://downloads.apache.org/tomcat/tomcat-10/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
         dest: /tmp/apache-tomcat-{{ tomcat_version }}.tar.gz
 
     - name: Create Tomcat install directory
